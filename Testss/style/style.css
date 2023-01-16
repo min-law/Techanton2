@@ -12,48 +12,56 @@ body{
     --test-light: #fff;
     --bd-radious: 10px;
 }
-
-#our-web{
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+}
+#our-web, #coming-soon{
     text-transform: uppercase;
-    height: 48px;
-    left: 559px;
-    top: 223px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
-    line-height: 48px;
     text-align: center;
     color: #F5F5F5;
+    margin: 0;
 }
 
 #coming-soon{
-    text-transform: uppercase;
-    width: 784px;
-    height: 117px;
-    left: 327px;
-    top: 267px;
     font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 100px;
-    line-height: 117px;
-    text-align: center;
+    font-size: 6.25rem;
     color: #06215E;
-    background: none;
 }
+
 
 #description{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.25625rem;
     line-height: 24px;
     padding-bottom: 70px;
     color: #FFFFFF;
     background: none;
+    margin: 0;
+    max-width: 80%;
 }
 
+@media screen and (max-width: 768px){
+    #our-web{
+        font-size: 30px;
+    }
+    #coming-soon{
+        font-size: 4rem;
+    }
+    #description{
+        font-size: 1rem;
+    }
+}
 #countdown {
     display: inline;
     color: white;
@@ -196,24 +204,38 @@ footer p{
 
 nav {
     background-color: rgba(79, 164, 194, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1145rem 1.6rem;
 }
 
 
 ul {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 100px;
     align-items: center;
+    padding: 10px 100px;
     flex-wrap: wrap;
     max-width: 100%;
 }
 
-nav ul img {
-    margin-right: 400px;
-}
 
 nav ul li {
     list-style-type: none;
+    margin: 0 1.625rem;
+    width: fit-content;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    ul {
+        padding: 10px 20px;
+    }
+    nav ul li {
+        margin: 0 1.1rem;
+    }
 }
 /* 
 nav ul li a svg {
@@ -235,9 +257,13 @@ nav ul li a:hover {
 }
 
 .login {
-    padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: rgba(6, 33, 94, 1);
+    height: 54px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width:360px) {
